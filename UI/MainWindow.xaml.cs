@@ -400,5 +400,47 @@ namespace RaidCatalog {
             });
             this.MainService.UpdateOrderFavorits(this.Model);
         }
+
+        private async void GlyphAtk_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphDef_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphHp_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphAtkP_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphDefP_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphHpP_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphAcc_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphRes_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphSpd_Click(object sender, RoutedEventArgs e) {
+            await MainService.UpdateArtifactWrappersAsync(this.Model);
+        }
+
+        private async void GlyphRating_Changed(object sender, RoutedPropertyChangedEventArgs<double?> e) {
+            if (this.Model.Data != null)
+                await MainService.UpdateArtifactWrappersAsync(this.Model);
+
+        }
     }
 }

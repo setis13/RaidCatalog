@@ -1,13 +1,9 @@
 ﻿using Newtonsoft.Json;
 using RaidCatalog.Logic.ViewModels;
-using RaidCatalog.Logic.WebServices.Models;
 using RaidCatalog.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RaidCatalog.Services {
     internal class SettingsService {
@@ -39,6 +35,16 @@ namespace RaidCatalog.Services {
             model.NoEquippedFilter = settings.NoEquippedFilter;
             model.EquippedFilter = settings.EquippedFilter;
 
+            model.GlyphRatingFilter = settings.GlyphRatingFilter;
+            model.GlyphAtkFilter = settings.GlyphAtkFilter;
+            model.GlyphDefFilter = settings.GlyphDefFilter;
+            model.GlyphHpFilter = settings.GlyphHpFilter;
+            model.GlyphAtkPFilter = settings.GlyphAtkPFilter;
+            model.GlyphDefPFilter = settings.GlyphDefPFilter;
+            model.GlyphHpPFilter = settings.GlyphHpPFilter;
+            model.GlyphAccFilter = settings.GlyphAccFilter;
+            model.GlyphResFilter = settings.GlyphResFilter;
+            model.GlyphSpdFilter = settings.GlyphSpdFilter;
         }
 
         public void Save(MainViewModel model, Settings settings) {
@@ -68,6 +74,17 @@ namespace RaidCatalog.Services {
 
             settings.NoEquippedFilter = model.NoEquippedFilter;
             settings.EquippedFilter = model.EquippedFilter;
+
+            settings.GlyphRatingFilter = model.GlyphRatingFilter;
+            settings.GlyphAtkFilter = model.GlyphAtkFilter;
+            settings.GlyphDefFilter = model.GlyphDefFilter;
+            settings.GlyphHpFilter = model.GlyphHpFilter;
+            settings.GlyphAtkPFilter = model.GlyphAtkPFilter;
+            settings.GlyphDefPFilter = model.GlyphDefPFilter;
+            settings.GlyphHpPFilter = model.GlyphHpPFilter;
+            settings.GlyphAccFilter = model.GlyphAccFilter;
+            settings.GlyphResFilter = model.GlyphResFilter;
+            settings.GlyphSpdFilter = model.GlyphSpdFilter;
 
             settings.Save();
         }

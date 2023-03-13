@@ -8,10 +8,6 @@
     <ApplicationIcon>logo_64.ico</ApplicationIcon>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Optimize>False</Optimize>
-  </PropertyGroup>
-
   <ItemGroup>
     <None Remove="logo_64.png" />
     <None Remove="Resources\Images\Filters\Banner.png" />
@@ -145,7 +141,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="telerik.ui.for.wpf.netcore.xaml" Version="2021.1.223" />
     <PackageReference Include="VirtualizingWrapPanel" Version="1.5.7" />
   </ItemGroup>
 
@@ -222,15 +221,6 @@
     </Reference>
     <Reference Include="Microsoft.AspNetCore.SignalR.Protocols.Json">
       <HintPath>..\Libraries\Microsoft.AspNetCore.SignalR.Protocols.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging">
-      <HintPath>..\Libraries\Microsoft.Extensions.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
-      <HintPath>..\Libraries\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Options">
-      <HintPath>..\Libraries\Microsoft.Extensions.Options.dll</HintPath>
     </Reference>
     <Reference Include="ReactiveUI">
       <HintPath>..\Libraries\ReactiveUI.dll</HintPath>

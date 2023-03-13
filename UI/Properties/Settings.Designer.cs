@@ -310,5 +310,125 @@ namespace RaidCatalog.Properties {
                 this["LowFavoriteFilter"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int GlyphRatingFilter {
+            get {
+                return ((int)(this["GlyphRatingFilter"]));
+            }
+            set {
+                this["GlyphRatingFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphAtkFilter {
+            get {
+                return ((bool)(this["GlyphAtkFilter"]));
+            }
+            set {
+                this["GlyphAtkFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphDefFilter {
+            get {
+                return ((bool)(this["GlyphDefFilter"]));
+            }
+            set {
+                this["GlyphDefFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphHpFilter {
+            get {
+                return ((bool)(this["GlyphHpFilter"]));
+            }
+            set {
+                this["GlyphHpFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphAtkPFilter {
+            get {
+                return ((bool)(this["GlyphAtkPFilter"]));
+            }
+            set {
+                this["GlyphAtkPFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphDefPFilter {
+            get {
+                return ((bool)(this["GlyphDefPFilter"]));
+            }
+            set {
+                this["GlyphDefPFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphHpPFilter {
+            get {
+                return ((bool)(this["GlyphHpPFilter"]));
+            }
+            set {
+                this["GlyphHpPFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphAccFilter {
+            get {
+                return ((bool)(this["GlyphAccFilter"]));
+            }
+            set {
+                this["GlyphAccFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphResFilter {
+            get {
+                return ((bool)(this["GlyphResFilter"]));
+            }
+            set {
+                this["GlyphResFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlyphSpdFilter {
+            get {
+                return ((bool)(this["GlyphSpdFilter"]));
+            }
+            set {
+                this["GlyphSpdFilter"] = value;
+            }
+        }
     }
 }

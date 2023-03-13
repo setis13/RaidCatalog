@@ -132,7 +132,10 @@ namespace RaidCatalog.Logic.Services {
         }
 
         private bool CheckFilter(ArtifactWrapper artifact, MainViewModel model) {
-            return this.CheckFilterByKind(artifact.Artifact, model) && this.CheckFilterByLevel(artifact.Artifact, model) && this.CheckFilterByEquipped(artifact, model);
+            return this.CheckFilterByKind(artifact.Artifact, model) &&
+                this.CheckFilterByLevel(artifact.Artifact, model) &&
+                this.CheckFilterByEquipped(artifact, model) &&
+                this.CheckFilterByGlyph(artifact.Artifact, model);
         }
 
         private bool CheckFilterByEquipped(ArtifactWrapper artifact, MainViewModel model) {
@@ -226,6 +229,200 @@ namespace RaidCatalog.Logic.Services {
             } else {
                 return true;
             }
+        }
+
+        public bool CheckFilterByGlyph(ArtifactViewModel artifact, MainViewModel model) {
+            //if (model. == false &&
+            //   model.GlyphDefFilter == false &&
+            //   model.GlyphHpFilter == false &&
+            //   model.GlyphAtkPFilter == false &&
+            //   model.GlyphDefPFilter == false &&
+            //   model.GlyphHpPFilter == false &&
+            //   model.GlyphAccFilter == false &&
+            //   model.GlyphResFilter == false &&
+            //   model.GlyphSpdFilter == false) {
+            //}
+            if (model.GlyphAtkFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Attack && e.IsAbsolute == true);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 5;
+                    case 2:
+                        return bonus.Enhancement < 10;
+                    case 3:
+                        return bonus.Enhancement < 15;
+                    case 4:
+                        return bonus.Enhancement < 20;
+                    case 5:
+                        return bonus.Enhancement < 25;
+                    case 6:
+                        return bonus.Enhancement < 30;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphDefFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Defense && e.IsAbsolute == true);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 5;
+                    case 2:
+                        return bonus.Enhancement < 10;
+                    case 3:
+                        return bonus.Enhancement < 15;
+                    case 4:
+                        return bonus.Enhancement < 20;
+                    case 5:
+                        return bonus.Enhancement < 25;
+                    case 6:
+                        return bonus.Enhancement < 30;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphHpFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Health && e.IsAbsolute == true);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 100;
+                    case 2:
+                        return bonus.Enhancement < 175;
+                    case 3:
+                        return bonus.Enhancement < 275;
+                    case 4:
+                        return bonus.Enhancement < 375;
+                    case 5:
+                        return bonus.Enhancement < 475;
+                    case 6:
+                        return bonus.Enhancement < 750;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphAtkPFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Attack && e.IsAbsolute == false);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 0.01;
+                    case 2:
+                        return bonus.Enhancement < 0.02;
+                    case 3:
+                        return bonus.Enhancement < 0.03;
+                    case 4:
+                        return bonus.Enhancement < 0.04;
+                    case 5:
+                        return bonus.Enhancement < 0.05;
+                    case 6:
+                        return bonus.Enhancement < 0.08;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphDefPFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Defense && e.IsAbsolute == false);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 0.01;
+                    case 2:
+                        return bonus.Enhancement < 0.02;
+                    case 3:
+                        return bonus.Enhancement < 0.03;
+                    case 4:
+                        return bonus.Enhancement < 0.04;
+                    case 5:
+                        return bonus.Enhancement < 0.05;
+                    case 6:
+                        return bonus.Enhancement < 0.08;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphHpPFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Health && e.IsAbsolute == false);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 0.01;
+                    case 2:
+                        return bonus.Enhancement < 0.02;
+                    case 3:
+                        return bonus.Enhancement < 0.03;
+                    case 4:
+                        return bonus.Enhancement < 0.04;
+                    case 5:
+                        return bonus.Enhancement < 0.05;
+                    case 6:
+                        return bonus.Enhancement < 0.08;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphAccFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Accuracy);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 2;
+                    case 2:
+                        return bonus.Enhancement < 4;
+                    case 3:
+                        return bonus.Enhancement < 6;
+                    case 4:
+                        return bonus.Enhancement < 8;
+                    case 5:
+                        return bonus.Enhancement < 10;
+                    case 6:
+                        return bonus.Enhancement < 16;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphResFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Resistance);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 2;
+                    case 2:
+                        return bonus.Enhancement < 4;
+                    case 3:
+                        return bonus.Enhancement < 6;
+                    case 4:
+                        return bonus.Enhancement < 8;
+                    case 5:
+                        return bonus.Enhancement < 10;
+                    case 6:
+                        return bonus.Enhancement < 16;
+                    default:
+                        return true;
+                }
+            }
+            if (model.GlyphSpdFilter == true) {
+                var bonus = artifact.SecondaryBonuses.FirstOrDefault(e => e.Kind == StatKind.Speed);
+                if (bonus == null) return false;
+                switch (model.GlyphRatingFilter) {
+                    case 1:
+                        return bonus.Enhancement < 1;
+                    case 2:
+                        return bonus.Enhancement < 2;
+                    case 3:
+                        return bonus.Enhancement < 3;
+                    case 4:
+                        return bonus.Enhancement < 4;
+                    case 5:
+                        return bonus.Enhancement < 5;
+                    case 6:
+                        return bonus.Enhancement < 8;
+                    default:
+                        return true;
+                }
+            }
+            return true;
         }
 
         public void UpdateSetArtifactWrappers(MainViewModel model) {

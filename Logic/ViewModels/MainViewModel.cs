@@ -48,6 +48,92 @@ namespace RaidCatalog.Logic.ViewModels {
 
         #endregion [ Favorite Filters ]
 
+        #region [ Gliph Filters ]
+
+        private int glyphRatingFilter;
+        private bool glyphAtkFilter;
+        private bool glyphDefFilter;
+        private bool glyphHpFilter;
+        private bool glyphAtkPFilter;
+        private bool glyphDefPFilter;
+        private bool glyphHpPFilter;
+        private bool glyphAccFilter;
+        private bool glyphResFilter;
+        private bool glyphSpdFilter;
+
+        public int GlyphRatingFilter {
+            get => glyphRatingFilter;
+            set {
+                glyphRatingFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphAtkFilter {
+            get => glyphAtkFilter;
+            set {
+                glyphAtkFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphDefFilter {
+            get => glyphDefFilter;
+            set {
+                glyphDefFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphHpFilter {
+            get => glyphHpFilter;
+            set {
+                glyphHpFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphAtkPFilter {
+            get => glyphAtkPFilter;
+            set {
+                glyphAtkPFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphDefPFilter {
+            get => glyphDefPFilter;
+            set {
+                glyphDefPFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphHpPFilter {
+            get => glyphHpPFilter;
+            set {
+                glyphHpPFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphAccFilter {
+            get => glyphAccFilter;
+            set {
+                glyphAccFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphResFilter {
+            get => glyphResFilter;
+            set {
+                glyphResFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool GlyphSpdFilter {
+            get => glyphSpdFilter;
+            set {
+                glyphSpdFilter = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion [ Gliph Filters ]
+
         #region [ Slot Filters ]
 
         private bool weaponFilter;
