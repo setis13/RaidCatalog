@@ -1,0 +1,374 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>logo_64.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="logo_64.png" />
+    <None Remove="Resources\Images\Filters\Banner.png" />
+    <None Remove="Resources\Images\Filters\Banner_On.png" />
+    <None Remove="Resources\Images\Filters\Blank.png" />
+    <None Remove="Resources\Images\Filters\Blank_On.png" />
+    <None Remove="Resources\Images\Filters\Boots.png" />
+    <None Remove="Resources\Images\Filters\Boots_On.png" />
+    <None Remove="Resources\Images\Filters\Chest.png" />
+    <None Remove="Resources\Images\Filters\Chest_On.png" />
+    <None Remove="Resources\Images\Filters\Cloak.png" />
+    <None Remove="Resources\Images\Filters\Cloak_On.png" />
+    <None Remove="Resources\Images\Filters\Gloves.png" />
+    <None Remove="Resources\Images\Filters\Gloves_On.png" />
+    <None Remove="Resources\Images\Filters\Helmet.png" />
+    <None Remove="Resources\Images\Filters\Helmet_On.png" />
+    <None Remove="Resources\Images\Filters\Level10.png" />
+    <None Remove="Resources\Images\Filters\Level10_On.png" />
+    <None Remove="Resources\Images\Filters\Level11.png" />
+    <None Remove="Resources\Images\Filters\Level11_On.png" />
+    <None Remove="Resources\Images\Filters\Level12.png" />
+    <None Remove="Resources\Images\Filters\Level12_On.png" />
+    <None Remove="Resources\Images\Filters\Level13.png" />
+    <None Remove="Resources\Images\Filters\Level13_On.png" />
+    <None Remove="Resources\Images\Filters\Level14.png" />
+    <None Remove="Resources\Images\Filters\Level14_On.png" />
+    <None Remove="Resources\Images\Filters\Level15.png" />
+    <None Remove="Resources\Images\Filters\Level15_On.png" />
+    <None Remove="Resources\Images\Filters\Level16.png" />
+    <None Remove="Resources\Images\Filters\Level16_On.png" />
+    <None Remove="Resources\Images\Filters\Level9.png" />
+    <None Remove="Resources\Images\Filters\Level9_On.png" />
+    <None Remove="Resources\Images\Filters\Ring.png" />
+    <None Remove="Resources\Images\Filters\Ring_On.png" />
+    <None Remove="Resources\Images\Filters\Shield.png" />
+    <None Remove="Resources\Images\Filters\Shield_On.png" />
+    <None Remove="Resources\Images\Filters\Weapon.png" />
+    <None Remove="Resources\Images\Filters\Weapon_On.png" />
+    <None Remove="Resources\Images\Fractions\BannerLords.png" />
+    <None Remove="Resources\Images\Fractions\Barbarians.png" />
+    <None Remove="Resources\Images\Fractions\DarkElves.png" />
+    <None Remove="Resources\Images\Fractions\Dwarves.png" />
+    <None Remove="Resources\Images\Fractions\force_icon.png" />
+    <None Remove="Resources\Images\Fractions\HighElves.png" />
+    <None Remove="Resources\Images\Fractions\KnightsRevenant.png" />
+    <None Remove="Resources\Images\Fractions\LizardMen.png" />
+    <None Remove="Resources\Images\Fractions\OgrynTribes.png" />
+    <None Remove="Resources\Images\Fractions\Orcs.png" />
+    <None Remove="Resources\Images\Fractions\SacredOrder.png" />
+    <None Remove="Resources\Images\Fractions\shadowkin.png" />
+    <None Remove="Resources\Images\Fractions\Skinwalkers.png" />
+    <None Remove="Resources\Images\Fractions\UndeadHordes.png" />
+    <None Remove="Resources\Images\Fractions\vault.png" />
+    <None Remove="Resources\Images\Sets\32bc5a79.png" />
+    <None Remove="Resources\Images\Sets\56f4ef9c.png" />
+    <None Remove="Resources\Images\Sets\636fdd16.png" />
+    <None Remove="Resources\Images\Sets\69477690.png" />
+    <None Remove="Resources\Images\Sets\6e764df4.png" />
+    <None Remove="Resources\Images\Sets\a3e0055c.png" />
+    <None Remove="Resources\Images\Sets\Accuracy.png" />
+    <None Remove="Resources\Images\Sets\ataka-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\AttackSpeed.png" />
+    <None Remove="Resources\Images\Sets\beshenstvo-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\besposchadnost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\bessmertie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\Bloodthirst.png" />
+    <None Remove="Resources\Images\Sets\c58ac5fd.png" />
+    <None Remove="Resources\Images\Sets\CriticalChance.png" />
+    <None Remove="Resources\Images\Sets\CriticalDamage.png" />
+    <None Remove="Resources\Images\Sets\Cruel.png" />
+    <None Remove="Resources\Images\Sets\d4fac08a.png" />
+    <None Remove="Resources\Images\Sets\Defense.png" />
+    <None Remove="Resources\Images\Sets\doblest-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\faa50187.png" />
+    <None Remove="Resources\Images\Sets\Fatal.png" />
+    <None Remove="Resources\Images\Sets\fca5f3dd.png" />
+    <None Remove="Resources\Images\Sets\gibel-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\Guardian.png" />
+    <None Remove="Resources\Images\Sets\hrabrost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\immunitet-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\intuicija-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\iscelenie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\jarost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\krazha-zhizni-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\krit.-photo-small_150px.png" />
+    <None Remove="Resources\Images\Sets\krit.-photo-small_150px_002.png" />
+    <None Remove="Resources\Images\Sets\Life.png" />
+    <None Remove="Resources\Images\Sets\Low.png" />
+    <None Remove="Resources\Images\Sets\mest-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\metkost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\moroz-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\nasmeshka-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\nebesnaja-ataka-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\nebesnaja-skorost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\nebesnaja-zhizn-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\nebesnyi-krit.-photo-small_150px.png" />
+    <None Remove="Resources\Images\Sets\Offense.png" />
+    <None Remove="Resources\Images\Sets\oglushenie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\otrava-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\parirovanie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\Perception.png" />
+    <None Remove="Resources\Images\Sets\prokljatie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\reakcija-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\regeneracija-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\Resilience.png" />
+    <None Remove="Resources\Images\Sets\Resistance.png" />
+    <None Remove="Resources\Images\Sets\schit-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\skorost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\soprotivlenie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\Speed.png" />
+    <None Remove="Resources\Images\Sets\stupor-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\svirepost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\vozmezdie-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\zaschita-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\zhestokost-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\zhivuchest-photo-small-150px.png" />
+    <None Remove="Resources\Images\Sets\zhizn-photo-small-150px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo_64.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="VirtualizingWrapPanel" Version="1.5.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\RaidCatalog.Logic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Avalonia.Animation">
+      <HintPath>..\Libraries\Avalonia.Animation.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\Libraries\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\Libraries\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Input">
+      <HintPath>..\Libraries\Avalonia.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Interactivity">
+      <HintPath>..\Libraries\Avalonia.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Layout">
+      <HintPath>..\Libraries\Avalonia.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup">
+      <HintPath>..\Libraries\Avalonia.Markup.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml">
+      <HintPath>..\Libraries\Avalonia.Markup.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Remote.Protocol">
+      <HintPath>..\Libraries\Avalonia.Remote.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Styling">
+      <HintPath>..\Libraries\Avalonia.Styling.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Visuals">
+      <HintPath>..\Libraries\Avalonia.Visuals.dll</HintPath>
+    </Reference>
+    <Reference Include="GpuGearMixer.Logic">
+      <HintPath>..\Libraries\GpuGearMixer.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="HellHades.ArtifactExtractor">
+      <HintPath>..\Libraries\HellHades.ArtifactExtractor.dll</HintPath>
+    </Reference>
+    <Reference Include="HellHades.ArtifactExtractor.Models">
+      <HintPath>..\Libraries\HellHades.ArtifactExtractor.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="ILGPU">
+      <HintPath>..\Libraries\ILGPU.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageBox.Avalonia">
+      <HintPath>..\Libraries\MessageBox.Avalonia.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack.Annotations">
+      <HintPath>..\Libraries\MessagePack.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Client">
+      <HintPath>..\Libraries\Microsoft.AspNetCore.Http.Connections.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Common">
+      <HintPath>..\Libraries\Microsoft.AspNetCore.Http.Connections.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client">
+      <HintPath>..\Libraries\Microsoft.AspNetCore.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client.Core">
+      <HintPath>..\Libraries\Microsoft.AspNetCore.SignalR.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Common">
+      <HintPath>..\Libraries\Microsoft.AspNetCore.SignalR.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Protocols.Json">
+      <HintPath>..\Libraries\Microsoft.AspNetCore.SignalR.Protocols.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+      <HintPath>..\Libraries\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\Libraries\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options">
+      <HintPath>..\Libraries\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI">
+      <HintPath>..\Libraries\ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\Libraries\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>..\Libraries\System.Reactive.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="logo_64.png" />
+    <Resource Include="Resources\Images\Filters\Banner.png" />
+    <Resource Include="Resources\Images\Filters\Banner_On.png" />
+    <Resource Include="Resources\Images\Filters\Blank.png" />
+    <Resource Include="Resources\Images\Filters\Blank_On.png" />
+    <Resource Include="Resources\Images\Filters\Boots.png" />
+    <Resource Include="Resources\Images\Filters\Boots_On.png" />
+    <Resource Include="Resources\Images\Filters\Chest.png" />
+    <Resource Include="Resources\Images\Filters\Chest_On.png" />
+    <Resource Include="Resources\Images\Filters\Cloak.png" />
+    <Resource Include="Resources\Images\Filters\Cloak_On.png" />
+    <Resource Include="Resources\Images\Filters\Gloves.png" />
+    <Resource Include="Resources\Images\Filters\Gloves_On.png" />
+    <Resource Include="Resources\Images\Filters\Helmet.png" />
+    <Resource Include="Resources\Images\Filters\Helmet_On.png" />
+    <Resource Include="Resources\Images\Filters\Level10.png" />
+    <Resource Include="Resources\Images\Filters\Level10_On.png" />
+    <Resource Include="Resources\Images\Filters\Level11.png" />
+    <Resource Include="Resources\Images\Filters\Level11_On.png" />
+    <Resource Include="Resources\Images\Filters\Level12.png" />
+    <Resource Include="Resources\Images\Filters\Level12_On.png" />
+    <Resource Include="Resources\Images\Filters\Level13.png" />
+    <Resource Include="Resources\Images\Filters\Level13_On.png" />
+    <Resource Include="Resources\Images\Filters\Level14.png" />
+    <Resource Include="Resources\Images\Filters\Level14_On.png" />
+    <Resource Include="Resources\Images\Filters\Level15.png" />
+    <Resource Include="Resources\Images\Filters\Level15_On.png" />
+    <Resource Include="Resources\Images\Filters\Level16.png" />
+    <Resource Include="Resources\Images\Filters\Level16_On.png" />
+    <Resource Include="Resources\Images\Filters\Level9.png" />
+    <Resource Include="Resources\Images\Filters\Level9_On.png" />
+    <Resource Include="Resources\Images\Filters\Ring.png" />
+    <Resource Include="Resources\Images\Filters\Ring_On.png" />
+    <Resource Include="Resources\Images\Filters\Shield.png" />
+    <Resource Include="Resources\Images\Filters\Shield_On.png" />
+    <Resource Include="Resources\Images\Filters\Weapon.png" />
+    <Resource Include="Resources\Images\Filters\Weapon_On.png" />
+    <Resource Include="Resources\Images\Fractions\BannerLords.png" />
+    <Resource Include="Resources\Images\Fractions\Barbarians.png" />
+    <Resource Include="Resources\Images\Fractions\DarkElves.png" />
+    <Resource Include="Resources\Images\Fractions\Dwarves.png" />
+    <Resource Include="Resources\Images\Fractions\force_icon.png" />
+    <Resource Include="Resources\Images\Fractions\HighElves.png" />
+    <Resource Include="Resources\Images\Fractions\KnightsRevenant.png" />
+    <Resource Include="Resources\Images\Fractions\LizardMen.png" />
+    <Resource Include="Resources\Images\Fractions\OgrynTribes.png" />
+    <Resource Include="Resources\Images\Fractions\Orcs.png" />
+    <Resource Include="Resources\Images\Fractions\SacredOrder.png" />
+    <Resource Include="Resources\Images\Fractions\shadowkin.png" />
+    <Resource Include="Resources\Images\Fractions\Skinwalkers.png" />
+    <Resource Include="Resources\Images\Fractions\UndeadHordes.png" />
+    <Resource Include="Resources\Images\Fractions\vault.png" />
+    <Resource Include="Resources\Images\Sets\56f4ef9c.png" />
+    <Resource Include="Resources\Images\Sets\6e764df4.png" />
+    <Resource Include="Resources\Images\Sets\Accuracy.png" />
+    <Resource Include="Resources\Images\Sets\beshenstvo-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\besposchadnost-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\bessmertie-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\Bloodthirst.png" />
+    <Resource Include="Resources\Images\Sets\c58ac5fd.png" />
+    <Resource Include="Resources\Images\Sets\CriticalChance.png" />
+    <Resource Include="Resources\Images\Sets\CriticalDamage.png" />
+    <Resource Include="Resources\Images\Sets\Cruel.png" />
+    <Resource Include="Resources\Images\Sets\d4fac08a.png" />
+    <Resource Include="Resources\Images\Sets\Defense.png" />
+    <Resource Include="Resources\Images\Sets\doblest-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\faa50187.png" />
+    <Resource Include="Resources\Images\Sets\Fatal.png" />
+    <Resource Include="Resources\Images\Sets\fca5f3dd.png" />
+    <Resource Include="Resources\Images\Sets\gibel-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\Guardian.png" />
+    <Resource Include="Resources\Images\Sets\hrabrost-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\immunitet-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\intuicija-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\iscelenie-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\jarost-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\krazha-zhizni-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\Life.png" />
+    <Resource Include="Resources\Images\Sets\Low.png" />
+    <Resource Include="Resources\Images\Sets\mest-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\moroz-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\nasmeshka-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\nebesnaja-ataka-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\nebesnaja-skorost-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\nebesnaja-zhizn-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\nebesnyi-krit.-photo-small_150px.png" />
+    <Resource Include="Resources\Images\Sets\Offense.png" />
+    <Resource Include="Resources\Images\Sets\oglushenie-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\otrava-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\parirovanie-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\Perception.png" />
+    <Resource Include="Resources\Images\Sets\prokljatie-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\reakcija-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\regeneracija-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\Resilience.png" />
+    <Resource Include="Resources\Images\Sets\Resistance.png" />
+    <Resource Include="Resources\Images\Sets\schit-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\Speed.png" />
+    <Resource Include="Resources\Images\Sets\stupor-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\svirepost-photo-small-150px.png" />
+    <Resource Include="Resources\Images\Sets\vozmezdie-photo-small-150px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SetSelectorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HeroesSelectorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
